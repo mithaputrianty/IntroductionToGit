@@ -14,3 +14,15 @@ Scenario Outline: Successful login
         | user1    | pass123  |
         | user2    | pass456  |
         | user3    | pass789  |
+
+Scenario Outline: Unsuccessful login
+    Given I am on the login page
+    When I enter invalid "<username>" and "<password>"
+    And I click on the login button
+    Then I should see an error message
+
+    Examples:
+        | username | password |
+        | user1    | pass123  |
+        | user2    | pass234  |
+        | user3    | pass345  |
