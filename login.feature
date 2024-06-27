@@ -13,4 +13,4 @@ Scenario Outline: Successful login
         | username | password |
         | user1    | pass123  |
         | user2    | pass456  |
-        | user3    | pass789  |
+        | user3    | pass789  |
